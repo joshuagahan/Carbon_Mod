@@ -1,3 +1,22 @@
-.DS_Store
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
 .project
-*.pyc
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
