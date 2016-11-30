@@ -18,4 +18,3 @@ public class ExampleMod
         System.out.println("DIRT BLOCK >> "+Blocks.DIRT.getUnlocalizedName());
     }
 }
-//test
