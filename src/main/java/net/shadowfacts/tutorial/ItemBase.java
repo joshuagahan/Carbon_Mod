@@ -1,5 +1,5 @@
 package net.shadowfacts.tutorial;
-
+//used to add items quickly and easily by using instances of this class in ModItems class
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.shadowfacts.tutorial.TutorialMod;

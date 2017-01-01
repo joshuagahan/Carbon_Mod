@@ -1,5 +1,5 @@
 package net.shadowfacts.tutorial;
-
+// the main class that forge uses to run the mod
 import net.shadowfacts.tutorial.proxy.*;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -21,6 +21,7 @@ public class TutorialMod {
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println(name + " is loading!");
 		ModItems.init();
+		ModBlocks.init();
 	}
 
 	@Mod.EventHandler
