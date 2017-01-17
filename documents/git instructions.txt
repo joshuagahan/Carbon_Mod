@@ -1,0 +1,10 @@
+in order to overwrite local files with a remote branch
+* git checkout <branchname>
+* git fetch //this downloads the branch you're in without changing any files
+* git reset --hard origin/<branchname>
+
+when adding new files
+* git status //lists all new or changed or removed files
+* git add . //this adds all the new or changed or removed files to the staging area
+* git commit -m "describe what you have done in these quotes"
+* git push //sends your changes to the remote
