@@ -1,3 +1,5 @@
+//if it's in brackets <> that means that you fill it in with what it's describing, not what it actually says.
+
 in order to overwrite local files with a remote branch
 * git checkout <branchname>
 * git fetch //this downloads the branch you're in without changing any files
@@ -8,3 +10,11 @@ when adding new files
 * git add . //this adds all the new or changed or removed files to the staging area
 * git commit -m "describe what you have done in these quotes"
 * git push //sends your changes to the remote
+
+When you dun goofed and have conflicts on the remote with your local so you can't push
+* git commit -m "message" //make sure to commit what you've done. It won't go away now.
+* git merge - <remote that you have conflicts on>
+// at this point it will prompt you for a text file commit explaining why you're trash and have to merge.
+// use this key sequence to be done when you are done: ESC :qw ENTER
+* git push
+// now your work is merged with your goof, and there's a nice sorry note that you wrote explaining why you're bad.
