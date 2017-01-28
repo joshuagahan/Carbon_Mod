@@ -16,12 +16,12 @@ public class TutorialMod {
 
 	@Mod.Instance(modId)
 	public static TutorialMod instance;
-
+	
 	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println(name + " is loading!");
-		ModItems.init();
+	public void preInit(FMLPreInitializationEvent event) { //FML stands for Forge Mod Loader, in case you were wondering		
+		//System.out.println(name + " is loading!"); //this doesn't do anything in eclipse
 		ModBlocks.init();
+		ModItems.init();
 	}
 
 	@Mod.EventHandler
@@ -33,8 +33,8 @@ public class TutorialMod {
 	public void postInit(FMLPostInitializationEvent event) {
 
 	}
-	
+	//forge stuff declaring which methods are our proxies
 	@SidedProxy(serverSide = "net.shadowfacts.tutorial.proxy.CommonProxy", clientSide = "net.shadowfacts.tutorial.proxy.ClientProxy")
-	public static CommonProxy proxy;
+	public static CommonProxy proxy; //used to do stuff with proxies
 
 }

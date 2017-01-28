@@ -3,10 +3,11 @@ package net.shadowfacts.tutorial;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.shadowfacts.tutorial.TutorialMod;
+import net.shadowfacts.tutorial.proxy.CommonProxy;
 
-public class BlockBase extends Block {
+public class BlockBase extends Block implements ItemModelProvider {
 
 	protected String name;
 
@@ -18,8 +19,8 @@ public class BlockBase extends Block {
 		setUnlocalizedName(name);
 		setRegistryName(name);
 	}
-
-	public void registerItemModel(ItemBlock itemBlock) {
+	@Override
+	public void registerItemModel(Item itemBlock) {	
 		TutorialMod.proxy.registerItemRenderer(itemBlock, 0, name);
 	}
 
