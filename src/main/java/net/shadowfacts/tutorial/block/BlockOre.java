@@ -1,7 +1,8 @@
-package net.shadowfacts.tutorial;
+package net.shadowfacts.tutorial.block;
 // a BlockOre is just a BlockBase with the specific properties of stone.
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.shadowfacts.tutorial.BlockBase;
 
 public class BlockOre extends BlockBase {
 

@@ -1,4 +1,7 @@
 package net.shadowfacts.tutorial;
+import net.shadowfacts.tutorial.block.ModBlocks;
+import net.shadowfacts.tutorial.gui.TutorialTab;
+import net.shadowfacts.tutorial.item.ModItems;
 // the main class that forge uses to run the mod
 import net.shadowfacts.tutorial.proxy.*;
 import net.minecraftforge.fml.common.Mod;
@@ -16,7 +19,7 @@ public class TutorialMod {
 
 	@Mod.Instance(modId)
 	public static TutorialMod instance;
-	
+	public static final TutorialTab creativeTab = new TutorialTab();
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) { //FML stands for Forge Mod Loader, in case you were wondering		
 		//System.out.println(name + " is loading!"); //this doesn't do anything in eclipse

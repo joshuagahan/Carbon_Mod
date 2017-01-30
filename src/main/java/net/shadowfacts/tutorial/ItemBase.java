@@ -13,6 +13,7 @@ public class ItemBase extends Item implements ItemModelProvider{
 		this.name = name;
 		setUnlocalizedName(name);
 		setRegistryName(name);
+		setCreativeTab(TutorialMod.creativeTab);
 	}
 	
 	//uses the proxy from the main class to give it its model

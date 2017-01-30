@@ -13,11 +13,10 @@ public class BlockBase extends Block implements ItemModelProvider {
 
 	public BlockBase(Material material, String name) {
 		super(material);
-
 		this.name = name;
-
 		setUnlocalizedName(name);
 		setRegistryName(name);
+		setCreativeTab(TutorialMod.creativeTab);
 	}
 	@Override
 	public void registerItemModel(Item itemBlock) {	

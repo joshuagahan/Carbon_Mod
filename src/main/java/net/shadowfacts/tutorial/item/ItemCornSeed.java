@@ -1,11 +1,12 @@
-package net.shadowfacts.tutorial;
+package net.shadowfacts.tutorial.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
+import net.shadowfacts.tutorial.ItemModelProvider;
 import net.shadowfacts.tutorial.TutorialMod;
-import net.shadowfacts.tutorial.ModBlocks;
+import net.shadowfacts.tutorial.block.ModBlocks;
 
 public class ItemCornSeed extends ItemSeeds implements ItemModelProvider {
 
@@ -13,6 +14,7 @@ public class ItemCornSeed extends ItemSeeds implements ItemModelProvider {
 		super(ModBlocks.cropCorn, Blocks.FARMLAND);
 		setUnlocalizedName("cornSeed");
 		setRegistryName("cornSeed");
+		setCreativeTab(TutorialMod.creativeTab);
 	}
 
 	@Override

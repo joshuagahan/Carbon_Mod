@@ -1,7 +1,9 @@
-package net.shadowfacts.tutorial;
+package net.shadowfacts.tutorial.block;
+
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
-import net.shadowfacts.tutorial.ModItems;
+import net.shadowfacts.tutorial.TutorialMod;
+import net.shadowfacts.tutorial.item.ModItems;
 //this class is for the crop corn you see in the world growing
 public class BlockCropCorn extends BlockCrops{
 	
@@ -9,6 +11,7 @@ public class BlockCropCorn extends BlockCrops{
 	{
 		setUnlocalizedName("cropCorn");
 		setRegistryName("cropCorn");
+		setCreativeTab(TutorialMod.creativeTab);
 	}
 	
 	@Override

@@ -1,4 +1,4 @@
-package net.shadowfacts.tutorial;
+package net.shadowfacts.tutorial.block;
 /* similar to ModItems class, except here there are some additional properties of blocks,
  * specifically ItemBlocks that are taken care of here.
  * this goes without saying, but make sure your lovely json files don't have any typos in them.
@@ -9,19 +9,23 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.shadowfacts.tutorial.BlockBase;
+import net.shadowfacts.tutorial.ItemModelProvider;
 
 public class ModBlocks {
 	
 	public static BlockOre oreCopper;
 	public static BlockBase blockTest;
 	public static BlockCropCorn cropCorn;
+	public static BlockCropTest cropTest;
 	
 	//these names should NEVER CHANGE (THIS INCLUDES THE ASSOCIATED .JSON FILES)
 	//this method instantiates the blocks
 	public static void init() { 
-		oreCopper = register(new BlockOre("oreCopper").setCreativeTab(CreativeTabs.MATERIALS));
-		blockTest = register(new BlockBase(Material.ROCK, "blockTest").setCreativeTab(CreativeTabs.MATERIALS));
+		oreCopper = register(new BlockOre("oreCopper"));
+		blockTest = register(new BlockBase(Material.ROCK, "blockTest"));
 		cropCorn = register(new BlockCropCorn(), null); //this is null because it doesn't have an ItemBlock
+		cropTest = register(new BlockCropTest(), null);
 	}
 
 	private static <T extends Block> T register(T block, ItemBlock itemBlock) {
