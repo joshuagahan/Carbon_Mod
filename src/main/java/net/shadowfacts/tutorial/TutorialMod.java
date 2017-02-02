@@ -4,6 +4,7 @@ import net.shadowfacts.tutorial.gui.TutorialTab;
 import net.shadowfacts.tutorial.item.ModItems;
 // the main class that forge uses to run the mod
 import net.shadowfacts.tutorial.proxy.*;
+import net.shadowfacts.tutorial.recipe.ModRecipes;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -29,7 +30,7 @@ public class TutorialMod {
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		
+		ModRecipes.init();
 	}
 
 	@Mod.EventHandler
