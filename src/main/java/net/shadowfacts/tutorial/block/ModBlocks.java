@@ -11,6 +11,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.shadowfacts.tutorial.BlockBase;
 import net.shadowfacts.tutorial.ItemModelProvider;
+import net.shadowfacts.tutorial.item.ItemOreDict;
 
 public class ModBlocks {
 	
@@ -22,7 +23,7 @@ public class ModBlocks {
 	//these names should NEVER CHANGE (THIS INCLUDES THE ASSOCIATED .JSON FILES)
 	//this method instantiates the blocks
 	public static void init() { 
-		oreCopper = register(new BlockOre("oreCopper"));
+		oreCopper = register(new BlockOre("oreCopper", "oreCopper"));
 		blockTest = register(new BlockBase(Material.ROCK, "blockTest"));
 		cropCorn = register(new BlockCropCorn(), null); //this is null because it doesn't have an ItemBlock
 		cropTest = register(new BlockCropTest(), null);
@@ -32,8 +33,15 @@ public class ModBlocks {
 		GameRegistry.register(block); //the thing you see in the world
 		if (itemBlock != null && block instanceof ItemModelProvider) //this null check exists in case a block does not have an itemBlock associated with it, like a crop for example
 		{ 
-			GameRegistry.register(itemBlock); //the block shaped thing you see in your inventory
-			((ItemModelProvider)block).registerItemModel(itemBlock); //gives the block its inventory form AKA itemBlock
+			GameRegistry.register(itemBlock); //registers the itemBlock, making it something that exists
+			((ItemModelProvider)block).registerItemModel(itemBlock); //gives the block its respective item block
+			
+			if(block instanceof ItemOreDict) {
+				((ItemOreDict)block).initOreDict();
+			}
+			if(itemBlock instanceof ItemOreDict) {
+				((ItemOreDict)itemBlock).initOreDict();
+			}
 		}
 		return block;
 	}

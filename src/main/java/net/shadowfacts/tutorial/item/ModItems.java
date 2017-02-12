@@ -20,10 +20,10 @@ public class ModItems {
 	//these names should NEVER CHANGE
 	//this method instantiates the items
 	public static void init() {
-		ingotCopper = register(new ItemBase("ingotCopper"));
+		ingotCopper = register(new ItemOre("ingotCopper", "ingotCopper"));
 		itemTest = register(new ItemBase("itemTest"));
 		cornSeed = register(new ItemCornSeed());
-		corn = register(new ItemBase("corn"));
+		corn = register(new ItemOre("corn", "cropCorn"));
 		seedTest = register(new ItemSeedTest());
 		foodTest = register(new ItemBase("foodTest"));
 		
@@ -35,6 +35,9 @@ public class ModItems {
 		//gives each item its model if it has one (why wouldn't it?)
 		if (item instanceof ItemModelProvider) {
 			((ItemModelProvider)item).registerItemModel(item);
+		}
+		if (item instanceof ItemOreDict){
+			((ItemOreDict)item).initOreDict();
 		}
 
 		return item; // #done
