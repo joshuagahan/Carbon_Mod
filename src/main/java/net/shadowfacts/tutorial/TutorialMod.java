@@ -5,6 +5,7 @@ import net.shadowfacts.tutorial.item.ModItems;
 // the main class that forge uses to run the mod
 import net.shadowfacts.tutorial.proxy.*;
 import net.shadowfacts.tutorial.recipe.ModRecipes;
+import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,6 +27,7 @@ public class TutorialMod {
 		//System.out.println(name + " is loading!"); //this doesn't do anything in eclipse
 		ModBlocks.init();
 		ModItems.init();
+		OBJLoader.INSTANCE.addDomain("tutorial");
 	}
 
 	@Mod.EventHandler

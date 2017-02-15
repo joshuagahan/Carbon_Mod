@@ -1,0 +1,14 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"normal": {
+			"model": "tutorial:blockCup.obj",
+			"texture" : "tutorial:blockCup.mtl"
+		},
+		"inventory": {
+			"model": "tutorial:blockCup.obj",
+			"texture" : "tutorial:blockCup.mtl",
+			"transform": "forge:default-block"
+		}
+	}
+}

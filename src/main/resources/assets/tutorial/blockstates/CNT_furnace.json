@@ -1,0 +1,12 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"normal": {
+			"model": "tutorial:CNT_furnace"
+		},
+		"inventory": {
+			"model": "tutorial:CNT_furnace",
+			"transform": "forge:default-block"
+		}
+	}
+}

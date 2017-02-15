@@ -19,6 +19,8 @@ public class ModBlocks {
 	public static BlockBase blockTest;
 	public static BlockCropCorn cropCorn;
 	public static BlockCropTest cropTest;
+	public static BlockCNT_furnace CNT_furnace;
+	public static BlockChalice blockCup;
 	
 	//these names should NEVER CHANGE (THIS INCLUDES THE ASSOCIATED .JSON FILES)
 	//this method instantiates the blocks
@@ -27,6 +29,8 @@ public class ModBlocks {
 		blockTest = register(new BlockBase(Material.ROCK, "blockTest"));
 		cropCorn = register(new BlockCropCorn(), null); //this is null because it doesn't have an ItemBlock
 		cropTest = register(new BlockCropTest(), null);
+		CNT_furnace = register(new BlockCNT_furnace());
+		blockCup = register(new BlockChalice());
 	}
 
 	private static <T extends Block> T register(T block, ItemBlock itemBlock) {
